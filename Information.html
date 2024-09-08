@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+</head>
+<body>
+    <h1>Information</h1>
+    <p3>Here you can view all the information about this website.</p3>
+    <br>
+    <P1>Currently there is no information...</P1>
+    <script>
+        var isLoggedIn = localStorage.getItem("isLoggedIn");
+        if (isLoggedIn !== "true") {
+            window.location.href = "index.html";
+        } else {
+            console.log("You are logged in");
+        }</script>
+    <script scr="Infromation.js"></script>
+</body>
+</html>
