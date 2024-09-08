@@ -10,7 +10,16 @@ window.onload = function() {
     }
 };
 
-window.addEventListener("beforeunload", function() {
+function ShowInfoButton(){
+    clickedInfoButton = true;
+    window.location.href = "Information.html";
+}
+
+window.addEventListener("beforeunload",function(event) {
+    if (!clickedInfoButton) {
     localStorage.setItem("isLoggedIn", "false");
-    console.log("item set to false");
-});
+    console.log("User left the page, item set to false");
+    } else {
+    console.log("Navigating to Information page, item NOT set to false");
+
+}})
